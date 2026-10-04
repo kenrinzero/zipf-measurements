@@ -1,0 +1,5 @@
+corpus,grain,n_tokens,n_types,hapax_types,hapax_share_of_types,dis_types,dis_share_of_types,hapax_share_of_tokens
+technical_full,surface,5685976,134602,63206,0.4696,18436,0.137,0.011116
+technical_full,lemma,5685976,121742,56800,0.4666,16279,0.1337,0.009989
+general_first_5685976,surface,5685976,88116,26930,0.3056,12484,0.1417,0.004736
+general_first_5685976,lemma,5685976,54113,14517,0.2683,6838,0.1264,0.002553

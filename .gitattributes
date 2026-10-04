@@ -1,0 +1,3 @@
+# Result tables are byte-identical copies of the archived originals (some CRLF); keep them as-is.
+*.csv -text
+*.png binary

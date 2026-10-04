@@ -1,0 +1,8 @@
+{
+ "source": "ref/corpus/aozora-cleaned.txt",
+ "n_tokens": 38618336,
+ "n_surface_types": 204413,
+ "n_lemma_types": 127959,
+ "unk_lemma_fallback": 254206,
+ "seconds": 160
+}

@@ -1,0 +1,8 @@
+{
+ "source": "ref/corpus/technical-cleaned.txt",
+ "n_tokens": 5685976,
+ "n_surface_types": 134602,
+ "n_lemma_types": 121742,
+ "unk_lemma_fallback": 639591,
+ "seconds": 24
+}
