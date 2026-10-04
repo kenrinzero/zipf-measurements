@@ -2,6 +2,10 @@
 
 Measured 2026-07-11. Published 2026-10-04.
 
+Measured by Claude Fable 5 (2026-07-10/11), first written up by Claude Fable 5.1
+(2026-09-18), audited against the archived tables and revised by Claude Opus 5.5
+(2026-10-04). My contribution was minimal.
+
 Lexical diversity is how varied a text's vocabulary is. The oldest measure is
 the type-token ratio (TTR): distinct word forms (types) divided by running words
 (tokens). TTR depends on length. As a text grows, new types arrive more and more
@@ -22,8 +26,9 @@ M1–M5.
 
 ## Corpora and method
 
-**Tokenisation.** Every token is a short-unit word (SUW) from MeCab, called
-through fugashi 1.5.2 with the unidic-lite 1.0.8 dictionary. Tokens with no kana,
+**Tokenisation.** Every token is a short-unit word (SUW) from MeCab (Kudo et
+al., 2004), called through fugashi 1.5.2 with the unidic-lite 1.0.8 packaging of
+the UniDic dictionary (Den et al., 2008). Tokens with no kana,
 kanji or alphanumeric character (pure punctuation and symbols) are dropped.
 Types are counted on surface forms. For the lemma comparison in M1 the lemma is
 UniDic's 語彙素 field. A token the dictionary does not know has no lemma, so its
@@ -74,13 +79,15 @@ snapshot fetched 2026-07-10.
 **Measures.** All are computed on surface forms:
 
 - TTR (types ÷ tokens);
-- Guiraud's index R (types ÷ √tokens);
-- MATTR, the moving-average TTR, with windows of 500 and 1,000 tokens;
-- MTLD, with the standard 0.72 factor threshold, averaged over forward and
-  backward passes;
-- HD-D, with the standard sample size of 42.
+- Guiraud's (1954) index R (types ÷ √tokens);
+- MATTR, the moving-average TTR (Covington & McFall, 2010), with windows of 500
+  and 1,000 tokens;
+- MTLD (McCarthy & Jarvis, 2010), with the standard 0.72 factor threshold,
+  averaged over forward and backward passes;
+- HD-D (McCarthy & Jarvis, 2007), with the standard sample size of 42.
 
-The reference is the `lexical-diversity` Python package, version 0.1.1. At full
+The reference is Kristopher Kyle's `lexical-diversity` Python package, version
+0.1.1. At full
 corpus size the package is too slow, so faster exact reimplementations were
 used. They match the package to within 10⁻⁶ on 1,000-, 10,000- and
 100,000-token prefixes of both corpora; `data/package_verification.csv` has the
@@ -129,7 +136,7 @@ limit does not apply to them.
 
 ## M2. TTR falls at the rate set by Heaps' law
 
-Heaps' law says that vocabulary grows as a power of length, V ∝ N^β. TTR is
+Heaps' law (Heaps, 1978) says that vocabulary grows as a power of length, V ∝ N^β. TTR is
 V/N, so it falls as N^(β−1). On a log-log plot, TTR's slope against length
 should therefore equal β − 1.
 
@@ -217,8 +224,40 @@ from.
 
 ## References
 
+- Covington, M. A., & McFall, J. D. (2010). Cutting the Gordian knot: The
+  moving-average type–token ratio (MATTR). *Journal of Quantitative Linguistics*,
+  17(2), 94–100. https://doi.org/10.1080/09296171003643098
+- Den, Y., Nakamura, J., Ogiso, T., & Ogura, H. (2008). A proper approach to
+  Japanese morphological analysis: Dictionary, model, and evaluation. In
+  *Proceedings of the Sixth International Conference on Language Resources and
+  Evaluation (LREC'08)*. Marrakech: European Language Resources Association.
+  https://aclanthology.org/L08-1535/
+- Guiraud, P. (1954). *Les caractères statistiques du vocabulaire: Essai de
+  méthodologie*. Paris: Presses Universitaires de France. WorldCat OCLC 8416329.
 - Heaps, H. S. (1978). *Information Retrieval: Computational and Theoretical
-  Aspects*. Academic Press.
+  Aspects*. New York: Academic Press.
+- Kudo, T., Yamamoto, K., & Matsumoto, Y. (2004). Applying conditional random
+  fields to Japanese morphological analysis. In *Proceedings of the 2004
+  Conference on Empirical Methods in Natural Language Processing* (pp. 230–237).
+  Barcelona: Association for Computational Linguistics.
+  https://aclanthology.org/W04-3230/
+- McCarthy, P. M., & Jarvis, S. (2007). vocd: A theoretical and empirical
+  evaluation. *Language Testing*, 24(4), 459–488.
+  https://doi.org/10.1177/0265532207080767
 - McCarthy, P. M., & Jarvis, S. (2010). MTLD, vocd-D, and HD-D: A validation
   study of sophisticated approaches to lexical diversity assessment. *Behavior
   Research Methods*, 42(2), 381–392.
+
+### Data and software
+
+- Aozora Bunko (青空文庫), https://www.aozora.gr.jp/, through the
+  aozorahack/aozorabunko_text mirror, https://github.com/aozorahack/aozorabunko_text
+- Japanese Wikipedia (ウィキペディア日本語版), categories 工学 and 化学,
+  https://ja.wikipedia.org/
+- Kyle, K. *lexical-diversity* (version 0.1.1) [Python package].
+  https://github.com/kristopherkyle/lexical_diversity
+- McCann, P. *fugashi* (version 1.5.2) and *unidic-lite* (version 1.0.8)
+  [Python packages]. https://github.com/polm/fugashi,
+  https://github.com/polm/unidic-lite
+- UniDic. National Institute for Japanese Language and Linguistics.
+  https://clrd.ninjal.ac.jp/unidic/
