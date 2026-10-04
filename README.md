@@ -17,7 +17,7 @@ the README file itself, through a release tag rather than `main`, so the link
 never changes and the page scrolls to the finding:
 
 ```
-https://github.com/kenrinzero/zipf-measurements/blob/v1.1/lexical-diversity/README.md#m4
+https://github.com/kenrinzero/zipf-measurements/blob/v1.2/lexical-diversity/README.md#m4
 ```
 
 Tagged contents are never edited. A correction or a new set comes out as a new

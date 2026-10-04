@@ -172,9 +172,10 @@ technical corpus R rises at every grid point, by +34.1% per tenfold increase.
 All three drift by less than 2% per tenfold increase on both corpora, against
 over 60% for TTR. No one of them is the flattest on both: MATTR with a 500-token
 window drifts least on the general corpus, and MTLD drifts least on the
-technical corpus. McCarthy and Jarvis (2010), testing English texts of about
-100–2,000 words, found MTLD to be the only index that did not vary with length.
-At corpus scale in Japanese, MATTR and HD-D pass as well.
+technical corpus. McCarthy and Jarvis (2010) compared MTLD with vocd-D, HD-D, Maas, Yule's K and
+TTR on English texts cut into sections of 100 to 2,000 words. MTLD was the only
+one that did not vary with length; HD-D did (r = .282 with text length). MATTR
+was not part of their comparison. At corpus scale in Japanese, HD-D also passes.
 
 HD-D's drift on the general corpus comes from its rise up to 10⁵ tokens (0.784
 to 0.826). From 10⁵ tokens to the full corpus it stays between 0.811 and 0.826,
