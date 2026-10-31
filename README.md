@@ -9,6 +9,7 @@ and SHA-256.
 | Set | Findings |
 |---|---|
 | [lexical-diversity](lexical-diversity/) | Five lexical-diversity measures (TTR, Guiraud's R, MATTR, MTLD, HD-D) tested for length independence on a general and a technical Japanese corpus, 10³ to 3.9×10⁷ tokens (M1–M5) |
+| [script-choice](script-choice/) | A pre-registered test of whether the kanji and kana forms Japanese writers choose minimise a cost, on BCCWJ's writing-form table: efficient on length and visual complexity, not on strokes (K1–K6) |
 
 ## Linking
 
