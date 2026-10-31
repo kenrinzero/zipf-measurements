@@ -1,0 +1,4 @@
+AOZ-surf-mecab-unidic: stream 38,618,336 tokens / 204,413 types vs list 38,618,336 / 204,413: PASS
+AOZ-lem-mecab-unidic: stream 38,618,336 tokens / 127,959 types vs list 38,618,336 / 127,959: PASS
+BIB-surf: stream 978,070 tokens / 16,008 types vs list 978,070 / 16,008: PASS
+BIB-lem: stream 978,070 tokens / 11,051 types vs list 978,070 / 11,051: PASS
